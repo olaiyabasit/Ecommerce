@@ -3,7 +3,7 @@ export type NavLinks = {
   route: string;
 };
 
-export type categories = {
+export type Categories = {
   name: string;
   link: string;
 };

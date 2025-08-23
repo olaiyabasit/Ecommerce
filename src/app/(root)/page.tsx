@@ -4,8 +4,18 @@ function Home() {
   return (
     <>
       <div>
-        <section className=" bg-dotted-pattern bg-contain px-3 py-5 md:py-10">
-          <div className="wrapper  grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+        <section className=" bg-dotted-pattern bg-contain  relative w-full h-screen flex items-center justify-center">
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/background.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="relative z-10 px-4 text-center">
             <div className="flex flex-col justfy-center gap-8">
               <h1 className="font-bold text-5xl">Discover What Moves You</h1>
               <p className="p-regular-20 md:p-regular-24">
@@ -22,19 +32,14 @@ function Home() {
                 Shop Smarter. Live better. Love what you own
               </p>
               <p>
-                <button type="button" className="bg-orange-400 btn font-bold">
+                <button
+                  type="button"
+                  className=" glass text-white btn font-bold  border-gray-900 hover:font-bold transition"
+                >
                   Explore now
                 </button>
               </p>
             </div>
-
-            {/* <Image
-              alt="hero"
-              className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
-              width={1000}
-              height={1000}
-              src={"/assets/images/hero.png"}
-            /> */}
           </div>
         </section>
       </div>
