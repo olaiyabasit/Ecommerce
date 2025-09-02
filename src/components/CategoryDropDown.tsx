@@ -1,6 +1,7 @@
 import React from "react";
 import { categories } from "@/constant/categories";
 import Link from "next/link";
+import { GetCatgoriesName } from "@/lib/lib";
 function CategoryDropDown() {
   return (
     <>
@@ -12,11 +13,7 @@ function CategoryDropDown() {
           tabIndex={0}
           className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
         >
-          {categories.map((cat, index) => (
-            <li key={index}>
-              <Link href={cat.link}>{cat.name}</Link>
-            </li>
-          ))}
+          {GetCatgoriesName()}
         </ul>
       </div>
     </>

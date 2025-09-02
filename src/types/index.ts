@@ -11,3 +11,9 @@ export type Categories = {
   image: string;
   description: string;
 };
+
+export type InputProps = {
+  label: string;
+  type?: string;
+  placeholder?: string;
+};
