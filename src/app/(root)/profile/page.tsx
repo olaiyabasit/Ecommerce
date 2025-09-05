@@ -1,3 +1,4 @@
+import ProfileInput from "@/components/ProfileInput";
 import Image from "next/image";
 import React from "react";
 
@@ -17,62 +18,12 @@ function Profile() {
           />
           <div>Edit Profile</div>
         </div>
-        <ul className="grid grid-cols-2 ">
-          <li className="flex flex-col mx-2">
-            <label htmlFor="name" className="font-bold text-[18px] my-1">
-              Name
-            </label>
-            <input
-              type="text"
-              className="w-full text-gray-900 p-1 outline-0 focus:outline-0 glass font-bold  bg-gray-500 rounded-md"
-              readOnly
-              value={"John Doe"}
-            />
-          </li>
-          <li className="flex flex-col mx-2">
-            <label htmlFor="name" className="font-bold text-[18px] my-1">
-              Email
-            </label>
-            <input
-              type="text"
-              className="w-full text-gray-900 p-1 outline-0 focus:outline-0 glass font-bold  bg-gray-500 rounded-md"
-              readOnly
-              value={"Johndoe@gmail.com"}
-            />
-          </li>
-          <li className="flex flex-col mx-2">
-            <label htmlFor="name" className="font-bold text-[18px] my-1">
-              Address
-            </label>
-            <input
-              type="text"
-              className="w-full text-gray-900 p-1 outline-0 focus:outline-0 glass font-bold  bg-gray-500 rounded-md"
-              readOnly
-              value={"1 itonuu 5th adetotun street "}
-            />
-          </li>
-          <li className="flex flex-col mx-2">
-            <label htmlFor="name" className="font-bold text-[18px] my-1">
-              Date of Birth
-            </label>
-            <input
-              type="text"
-              className="w-full text-gray-900 p-1 outline-0 focus:outline-0 glass font-bold  bg-gray-500 rounded-md"
-              readOnly
-              value={"2/22/16"}
-            />
-          </li>
-          <li className="flex flex-col mx-2">
-            <label htmlFor="name" className="font-bold text-[18px] my-1">
-              Gender
-            </label>
-            <input
-              type="text"
-              className="w-1/2 p-1 text-gray-900 outline-0 focus:outline-0 glass font-bold  bg-gray-500 rounded-md"
-              readOnly
-              value={"Male"}
-            />
-          </li>
+        <ul className="grid   grid-cols-1 md:grid-cols-2">
+          <ProfileInput label="Name" value="John Doe" />
+          <ProfileInput label="Email" value="Johndoe@gmail.com" />
+          <ProfileInput label="Address" value="1 itonuu 5th adetotun street" />
+          <ProfileInput label="Date of Birth" value="2/22/14" />
+          <ProfileInput label="Gender" value="Male" />
         </ul>
       </section>
     </>

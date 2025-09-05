@@ -44,11 +44,13 @@ function Navbar() {
                 </ul>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link href="/order">My Orders</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-[30px]">Z-store</a>
+          <Link href={"/"} className="btn btn-ghost text-[30px]">
+            Z-store
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className=" menu menu-horizontal px-1">
@@ -59,7 +61,7 @@ function Navbar() {
               <CategoryDropDown />
             </li>
             <li>
-              <a>Item 3</a>
+              <a>About us</a>
             </li>
           </ul>
         </div>
@@ -85,7 +87,7 @@ function Navbar() {
                 <Link href="/profile">Profile</Link>
               </li>
               <li>
-                <a>Settings</a>
+                <Link href="/order">My Orders</Link>
               </li>
               <li>
                 <a>Logout</a>
