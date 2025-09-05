@@ -23,13 +23,3 @@ export const navLinks: NavLinks[] = [
     route: "/cart",
   },
 ];
-
-export const categories: Categories[] = [
-  {
-    name: "Electornics",
-    link: "/categories/electronics",
-  },
-  { name: "Fashion", link: "/categories/fashion" },
-  { name: "Toys", link: "/catgories/toys" },
-  { name: "Books", link: "/categories/books" },
-];

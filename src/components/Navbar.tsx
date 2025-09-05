@@ -1,4 +1,7 @@
+import Link from "next/link";
 import React from "react";
+import CategoryDropDown from "./CategoryDropDown";
+import { categories } from "@/constant/categories";
 
 function Navbar() {
   return (
@@ -28,46 +31,37 @@ function Navbar() {
               className=" glass menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Item 1</a>
+                <Link href={"/products"}>Products</Link>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
+                <h2>Catgories</h2>
+                <ul>
+                  {categories.map((cat, index) => (
+                    <li key={index}>
+                      <Link href={cat.link}>{cat.name}</Link>
+                    </li>
+                  ))}
                 </ul>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link href="/order">My Orders</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-[30px]">Z-store</a>
+          <Link href={"/"} className="btn btn-ghost text-[30px]">
+            Z-store
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className=" menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <Link href={"/products"}>Products</Link>
             </li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2 glass">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
+              <CategoryDropDown />
             </li>
             <li>
-              <a>Item 3</a>
+              <a>About us</a>
             </li>
           </ul>
         </div>
@@ -90,10 +84,10 @@ function Navbar() {
               className="glass menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a className="justify-between">Profile</a>
+                <Link href="/profile">Profile</Link>
               </li>
               <li>
-                <a>Settings</a>
+                <Link href="/order">My Orders</Link>
               </li>
               <li>
                 <a>Logout</a>
