@@ -4,7 +4,7 @@ import React from "react";
 
 function Login() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen drop-shadow-[0_0_6px_rgba(255,255,255,0.3)]">
+    <section className="flex flex-col items-center justify-center min-h-screen  ">
       <h2 className="font-bold text-3xl my-2">Login</h2>
       <small className="italic">Glad to have you back</small>
       <form action="" className="space-y-4">

@@ -3,7 +3,7 @@ import React from "react";
 
 function Input({ label, placeholder, type }: InputProps) {
   return (
-    <div className="flex flex-col  p-2 m-2 rounded-md border border-gray-900   bg-gray-600">
+    <div className="flex flex-col w-64  p-2 m-2 rounded-md border border-gray-900   bg-gray-600">
       <label htmlFor="" className="text-gray-300 font-bold text-[12px]">
         {label}
       </label>

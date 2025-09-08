@@ -17,3 +17,9 @@ export type InputProps = {
   type?: string;
   placeholder?: string;
 };
+
+export type AdminRoutes = {
+  imageUrl: string;
+  routeText: string;
+  href: string;
+};
