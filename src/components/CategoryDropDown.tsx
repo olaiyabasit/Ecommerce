@@ -1,6 +1,5 @@
 import React from "react";
-import { categories } from "@/constant/categories";
-import Link from "next/link";
+
 import { GetCatgoriesName } from "@/lib/lib";
 function CategoryDropDown() {
   return (
