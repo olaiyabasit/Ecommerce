@@ -12,7 +12,7 @@ function SignUp() {
           <Input label="First Name" />
           <Input label="Last Name" />
         </div>
-        <div>
+        <div className="grid grid-cols-2">
           <Input label="Date of Birth" type="date" />
           <Input label="Address/Location" />
           <Input label="Email" type="email" />

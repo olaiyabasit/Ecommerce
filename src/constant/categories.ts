@@ -1,4 +1,4 @@
-import { Categories } from "@/types";
+import { Categories, Product } from "@/types";
 
 export const categories: Categories[] = [
   {
@@ -80,5 +80,69 @@ export const categories: Categories[] = [
     image: "pets.jpg",
     description: "Food, toys, and accessories for your furry friends.",
     link: "/categories/Pet",
+  },
+];
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    description:
+      "Noise-cancelling over-ear headphones with 30 hours battery life.",
+    price: 120.99,
+    stock: 50,
+    categoryId: 1, // Electronics
+    createdAt: new Date("2025-09-01T08:00:00Z"),
+    updatedAt: new Date("2025-09-10T12:00:00Z"),
+  },
+  {
+    id: 2,
+    name: "Gaming Laptop",
+    description: "15-inch high-performance laptop with RTX 4060 GPU.",
+    price: 1500.0,
+    stock: 10,
+    categoryId: 1, // Electronics
+    createdAt: new Date("2025-08-20T10:00:00Z"),
+    updatedAt: new Date("2025-09-11T14:00:00Z"),
+  },
+  {
+    id: 3,
+    name: "Cotton T-Shirt",
+    description: "100% cotton T-shirt, available in multiple colors.",
+    price: 19.99,
+    stock: 200,
+    categoryId: 2, // Clothing
+    createdAt: new Date("2025-09-05T09:30:00Z"),
+    updatedAt: new Date("2025-09-09T18:00:00Z"),
+  },
+  {
+    id: 4,
+    name: "Denim Jeans",
+    description: "Slim-fit denim jeans with stretchable fabric.",
+    price: 49.99,
+    stock: 100,
+    categoryId: 2, // Clothing
+    createdAt: new Date("2025-08-30T11:00:00Z"),
+    updatedAt: new Date("2025-09-10T16:00:00Z"),
+  },
+  {
+    id: 5,
+    name: "Programming in TypeScript",
+    description: "Beginner to advanced guide on mastering TypeScript.",
+    price: 39.5,
+    stock: 30,
+    categoryId: 3, // Books
+    createdAt: new Date("2025-09-02T13:00:00Z"),
+    updatedAt: new Date("2025-09-12T09:00:00Z"),
+  },
+  {
+    id: 6,
+    name: "Wireless Mouse",
+    description: "Ergonomic wireless mouse with adjustable DPI.",
+    price: 25.99,
+    stock: 80,
+    categoryId: 1, // Electronics
+    createdAt: new Date("2025-09-03T15:00:00Z"),
+    updatedAt: new Date("2025-09-11T11:00:00Z"),
   },
 ];
