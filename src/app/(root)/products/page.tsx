@@ -1,7 +1,7 @@
 "use client";
 
 import { useOrderStore } from "@/app/store/useOrderStore";
-
+import { toast } from "react-toastify";
 import { categories, products } from "@/constant/categories";
 import React from "react";
 
@@ -42,6 +42,7 @@ function Products() {
                       price: pro.price,
                       productId: pro.id,
                     });
+                    toast.success(`${pro.name} added to cart!`);
                   }}
                   className="bg-orange-400 text-base-100 font-bold border-0 outline-0 btn w-full flex items-center justify-center"
                 >

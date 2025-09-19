@@ -61,7 +61,7 @@ function Navbar() {
               <CategoryDropDown />
             </li>
             <li>
-              <a>About us</a>
+              <Link href={"/cart"}>Cart</Link>
             </li>
           </ul>
         </div>

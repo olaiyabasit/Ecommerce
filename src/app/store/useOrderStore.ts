@@ -13,13 +13,16 @@ type OrderState = {
     itemId: number,
     status: "PENDING" | "SUCCESS" | "FAILED"
   ) => void;
+  getTotalOrders: (orderId: number) => number;
+  getOrdersCount: () => number;
 };
 
 export const useOrderStore = create<OrderState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       cart: [],
       orders: [],
+
       addToCart: (item) =>
         set((state) => {
           const exists = state.cart.find((i) => i.productId === item.productId);
@@ -39,10 +42,12 @@ export const useOrderStore = create<OrderState>()(
             ],
           };
         }),
+
       removeFromCart: (productId) =>
         set((state) => ({
           cart: state.cart.filter((i) => i.productId !== productId),
         })),
+
       finishOrder: () =>
         set((state) => {
           if (state.cart.length === 0) return state;
@@ -57,6 +62,18 @@ export const useOrderStore = create<OrderState>()(
           };
           return { cart: [], orders: [...state.orders, newOrder] };
         }),
+
+      getTotalOrders: (orderId) => {
+        const order = get().orders.find((o) => o.id === orderId);
+        if (!order) return 0;
+        return order.items.reduce(
+          (acc, item) => acc + item.price * item.quantity,
+          0 // 👈 initial value
+        );
+      },
+
+      getOrdersCount: () => get().orders.length,
+
       updateOrderItemStatus: (orderId, itemId, status) =>
         set((state) => ({
           orders: state.orders.map((order) =>
@@ -71,6 +88,6 @@ export const useOrderStore = create<OrderState>()(
           ),
         })),
     }),
-    { name: "order-storage" } // stored in localStorage
+    { name: "order-storage" }
   )
 );
